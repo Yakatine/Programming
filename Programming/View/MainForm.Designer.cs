@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageEnums = new System.Windows.Forms.TabPage();
+            this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
+            this.SeasonLabel = new System.Windows.Forms.Label();
+            this.SeasonGoButton = new System.Windows.Forms.Button();
+            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
+            this.WeekdayParsingGroupBox = new System.Windows.Forms.GroupBox();
+            this.parseResultTextBox = new System.Windows.Forms.TextBox();
+            this.ParseLabel = new System.Windows.Forms.Label();
+            this.ParsButton = new System.Windows.Forms.Button();
+            this.parsingTextBox = new System.Windows.Forms.TextBox();
             this.EnumarationGroupBox = new System.Windows.Forms.GroupBox();
             this.ValuesTextBoxLabel = new System.Windows.Forms.Label();
             this.ValuesListBoxLabel = new System.Windows.Forms.Label();
@@ -37,34 +46,134 @@
             this.ValuesListBox = new System.Windows.Forms.ListBox();
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.WeekdayParsingGroupBox = new System.Windows.Forms.GroupBox();
-            this.parsingTextBox = new System.Windows.Forms.TextBox();
-            this.ParsButton = new System.Windows.Forms.Button();
-            this.ParseLabel = new System.Windows.Forms.Label();
-            this.parseResultTextBox = new System.Windows.Forms.TextBox();
-            this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
-            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
-            this.SeasonGoButton = new System.Windows.Forms.Button();
-            this.SeasonLabel = new System.Windows.Forms.Label();
-            this.tabPage1.SuspendLayout();
+            this.tabPageClasses = new System.Windows.Forms.TabPage();
+            this.RectGroupBox = new System.Windows.Forms.GroupBox();
+            this.FindRectangleButton = new System.Windows.Forms.Button();
+            this.ColorLabel = new System.Windows.Forms.Label();
+            this.WidthLabel = new System.Windows.Forms.Label();
+            this.LenghtLabel = new System.Windows.Forms.Label();
+            this.ColorTextBox = new System.Windows.Forms.TextBox();
+            this.WidthTextBox = new System.Windows.Forms.TextBox();
+            this.LenghtTextBox = new System.Windows.Forms.TextBox();
+            this.RectangleListBox = new System.Windows.Forms.ListBox();
+            this.tabPageEnums.SuspendLayout();
+            this.SeasonHandleGroupBox.SuspendLayout();
+            this.WeekdayParsingGroupBox.SuspendLayout();
             this.EnumarationGroupBox.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.WeekdayParsingGroupBox.SuspendLayout();
-            this.SeasonHandleGroupBox.SuspendLayout();
+            this.tabPageClasses.SuspendLayout();
+            this.RectGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabPage1
+            // tabPageEnums
             // 
-            this.tabPage1.Controls.Add(this.SeasonHandleGroupBox);
-            this.tabPage1.Controls.Add(this.WeekdayParsingGroupBox);
-            this.tabPage1.Controls.Add(this.EnumarationGroupBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1174, 594);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Enums";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageEnums.Controls.Add(this.SeasonHandleGroupBox);
+            this.tabPageEnums.Controls.Add(this.WeekdayParsingGroupBox);
+            this.tabPageEnums.Controls.Add(this.EnumarationGroupBox);
+            this.tabPageEnums.Location = new System.Drawing.Point(4, 25);
+            this.tabPageEnums.Name = "tabPageEnums";
+            this.tabPageEnums.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEnums.Size = new System.Drawing.Size(1174, 594);
+            this.tabPageEnums.TabIndex = 0;
+            this.tabPageEnums.Text = "Enums";
+            this.tabPageEnums.UseVisualStyleBackColor = true;
+            // 
+            // SeasonHandleGroupBox
+            // 
+            this.SeasonHandleGroupBox.Controls.Add(this.SeasonLabel);
+            this.SeasonHandleGroupBox.Controls.Add(this.SeasonGoButton);
+            this.SeasonHandleGroupBox.Controls.Add(this.SeasonComboBox);
+            this.SeasonHandleGroupBox.Location = new System.Drawing.Point(581, 390);
+            this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
+            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(576, 195);
+            this.SeasonHandleGroupBox.TabIndex = 8;
+            this.SeasonHandleGroupBox.TabStop = false;
+            this.SeasonHandleGroupBox.Text = "Season Handle";
+            // 
+            // SeasonLabel
+            // 
+            this.SeasonLabel.AutoSize = true;
+            this.SeasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SeasonLabel.Location = new System.Drawing.Point(17, 53);
+            this.SeasonLabel.Name = "SeasonLabel";
+            this.SeasonLabel.Size = new System.Drawing.Size(130, 20);
+            this.SeasonLabel.TabIndex = 2;
+            this.SeasonLabel.Text = "Choose season:";
+            // 
+            // SeasonGoButton
+            // 
+            this.SeasonGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SeasonGoButton.Location = new System.Drawing.Point(317, 73);
+            this.SeasonGoButton.Name = "SeasonGoButton";
+            this.SeasonGoButton.Size = new System.Drawing.Size(90, 30);
+            this.SeasonGoButton.TabIndex = 1;
+            this.SeasonGoButton.Text = "Go!";
+            this.SeasonGoButton.UseVisualStyleBackColor = true;
+            this.SeasonGoButton.Click += new System.EventHandler(this.SeasonGoButton_Click);
+            // 
+            // SeasonComboBox
+            // 
+            this.SeasonComboBox.FormattingEnabled = true;
+            this.SeasonComboBox.Items.AddRange(new object[] {
+            "Winter",
+            "Spring",
+            "Summer",
+            "Autumn"});
+            this.SeasonComboBox.Location = new System.Drawing.Point(21, 78);
+            this.SeasonComboBox.Name = "SeasonComboBox";
+            this.SeasonComboBox.Size = new System.Drawing.Size(274, 24);
+            this.SeasonComboBox.TabIndex = 0;
+            // 
+            // WeekdayParsingGroupBox
+            // 
+            this.WeekdayParsingGroupBox.Controls.Add(this.parseResultTextBox);
+            this.WeekdayParsingGroupBox.Controls.Add(this.ParseLabel);
+            this.WeekdayParsingGroupBox.Controls.Add(this.ParsButton);
+            this.WeekdayParsingGroupBox.Controls.Add(this.parsingTextBox);
+            this.WeekdayParsingGroupBox.Location = new System.Drawing.Point(8, 390);
+            this.WeekdayParsingGroupBox.Name = "WeekdayParsingGroupBox";
+            this.WeekdayParsingGroupBox.Size = new System.Drawing.Size(551, 196);
+            this.WeekdayParsingGroupBox.TabIndex = 7;
+            this.WeekdayParsingGroupBox.TabStop = false;
+            this.WeekdayParsingGroupBox.Text = "Weekday Parsing";
+            // 
+            // parseResultTextBox
+            // 
+            this.parseResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.parseResultTextBox.Location = new System.Drawing.Point(22, 114);
+            this.parseResultTextBox.Name = "parseResultTextBox";
+            this.parseResultTextBox.ReadOnly = true;
+            this.parseResultTextBox.Size = new System.Drawing.Size(299, 27);
+            this.parseResultTextBox.TabIndex = 3;
+            // 
+            // ParseLabel
+            // 
+            this.ParseLabel.AutoSize = true;
+            this.ParseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ParseLabel.Location = new System.Drawing.Point(18, 53);
+            this.ParseLabel.Name = "ParseLabel";
+            this.ParseLabel.Size = new System.Drawing.Size(179, 20);
+            this.ParseLabel.TabIndex = 2;
+            this.ParseLabel.Text = "Type value for parsing:";
+            // 
+            // ParsButton
+            // 
+            this.ParsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ParsButton.Location = new System.Drawing.Point(338, 73);
+            this.ParsButton.Name = "ParsButton";
+            this.ParsButton.Size = new System.Drawing.Size(117, 29);
+            this.ParsButton.TabIndex = 1;
+            this.ParsButton.Text = "Parse";
+            this.ParsButton.UseVisualStyleBackColor = true;
+            this.ParsButton.Click += new System.EventHandler(this.ParsButton_Click);
+            // 
+            // parsingTextBox
+            // 
+            this.parsingTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.parsingTextBox.Location = new System.Drawing.Point(22, 76);
+            this.parsingTextBox.Name = "parsingTextBox";
+            this.parsingTextBox.Size = new System.Drawing.Size(299, 24);
+            this.parsingTextBox.TabIndex = 0;
             // 
             // EnumarationGroupBox
             // 
@@ -143,7 +252,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPageEnums);
+            this.tabControl1.Controls.Add(this.tabPageClasses);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -151,102 +261,108 @@
             this.tabControl1.Size = new System.Drawing.Size(1182, 623);
             this.tabControl1.TabIndex = 0;
             // 
-            // WeekdayParsingGroupBox
+            // tabPageClasses
             // 
-            this.WeekdayParsingGroupBox.Controls.Add(this.parseResultTextBox);
-            this.WeekdayParsingGroupBox.Controls.Add(this.ParseLabel);
-            this.WeekdayParsingGroupBox.Controls.Add(this.ParsButton);
-            this.WeekdayParsingGroupBox.Controls.Add(this.parsingTextBox);
-            this.WeekdayParsingGroupBox.Location = new System.Drawing.Point(8, 390);
-            this.WeekdayParsingGroupBox.Name = "WeekdayParsingGroupBox";
-            this.WeekdayParsingGroupBox.Size = new System.Drawing.Size(551, 196);
-            this.WeekdayParsingGroupBox.TabIndex = 7;
-            this.WeekdayParsingGroupBox.TabStop = false;
-            this.WeekdayParsingGroupBox.Text = "Weekday Parsing";
+            this.tabPageClasses.Controls.Add(this.RectGroupBox);
+            this.tabPageClasses.Location = new System.Drawing.Point(4, 25);
+            this.tabPageClasses.Name = "tabPageClasses";
+            this.tabPageClasses.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageClasses.Size = new System.Drawing.Size(1174, 594);
+            this.tabPageClasses.TabIndex = 1;
+            this.tabPageClasses.Text = "Classes";
+            this.tabPageClasses.UseVisualStyleBackColor = true;
             // 
-            // parsingTextBox
+            // RectGroupBox
             // 
-            this.parsingTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.parsingTextBox.Location = new System.Drawing.Point(22, 76);
-            this.parsingTextBox.Name = "parsingTextBox";
-            this.parsingTextBox.Size = new System.Drawing.Size(299, 24);
-            this.parsingTextBox.TabIndex = 0;
+            this.RectGroupBox.Controls.Add(this.FindRectangleButton);
+            this.RectGroupBox.Controls.Add(this.ColorLabel);
+            this.RectGroupBox.Controls.Add(this.WidthLabel);
+            this.RectGroupBox.Controls.Add(this.LenghtLabel);
+            this.RectGroupBox.Controls.Add(this.ColorTextBox);
+            this.RectGroupBox.Controls.Add(this.WidthTextBox);
+            this.RectGroupBox.Controls.Add(this.LenghtTextBox);
+            this.RectGroupBox.Controls.Add(this.RectangleListBox);
+            this.RectGroupBox.Location = new System.Drawing.Point(22, 34);
+            this.RectGroupBox.Name = "RectGroupBox";
+            this.RectGroupBox.Size = new System.Drawing.Size(451, 299);
+            this.RectGroupBox.TabIndex = 8;
+            this.RectGroupBox.TabStop = false;
+            this.RectGroupBox.Text = "Rectangles";
             // 
-            // ParsButton
+            // FindRectangleButton
             // 
-            this.ParsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ParsButton.Location = new System.Drawing.Point(338, 73);
-            this.ParsButton.Name = "ParsButton";
-            this.ParsButton.Size = new System.Drawing.Size(117, 29);
-            this.ParsButton.TabIndex = 1;
-            this.ParsButton.Text = "Parse";
-            this.ParsButton.UseVisualStyleBackColor = true;
-            this.ParsButton.Click += new System.EventHandler(this.ParsButton_Click);
+            this.FindRectangleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FindRectangleButton.Location = new System.Drawing.Point(300, 234);
+            this.FindRectangleButton.Name = "FindRectangleButton";
+            this.FindRectangleButton.Size = new System.Drawing.Size(120, 36);
+            this.FindRectangleButton.TabIndex = 7;
+            this.FindRectangleButton.Text = "Find";
+            this.FindRectangleButton.UseVisualStyleBackColor = true;
+            this.FindRectangleButton.Click += new System.EventHandler(this.FindRectangleButton_Click);
             // 
-            // ParseLabel
+            // ColorLabel
             // 
-            this.ParseLabel.AutoSize = true;
-            this.ParseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ParseLabel.Location = new System.Drawing.Point(18, 53);
-            this.ParseLabel.Name = "ParseLabel";
-            this.ParseLabel.Size = new System.Drawing.Size(179, 20);
-            this.ParseLabel.TabIndex = 2;
-            this.ParseLabel.Text = "Type value for parsing:";
+            this.ColorLabel.AutoSize = true;
+            this.ColorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColorLabel.Location = new System.Drawing.Point(297, 147);
+            this.ColorLabel.Name = "ColorLabel";
+            this.ColorLabel.Size = new System.Drawing.Size(49, 18);
+            this.ColorLabel.TabIndex = 6;
+            this.ColorLabel.Text = "Color:";
             // 
-            // parseResultTextBox
+            // WidthLabel
             // 
-            this.parseResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.parseResultTextBox.Location = new System.Drawing.Point(22, 114);
-            this.parseResultTextBox.Name = "parseResultTextBox";
-            this.parseResultTextBox.ReadOnly = true;
-            this.parseResultTextBox.Size = new System.Drawing.Size(299, 27);
-            this.parseResultTextBox.TabIndex = 3;
+            this.WidthLabel.AutoSize = true;
+            this.WidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WidthLabel.Location = new System.Drawing.Point(297, 89);
+            this.WidthLabel.Name = "WidthLabel";
+            this.WidthLabel.Size = new System.Drawing.Size(50, 18);
+            this.WidthLabel.TabIndex = 5;
+            this.WidthLabel.Text = "Width:";
             // 
-            // SeasonHandleGroupBox
+            // LenghtLabel
             // 
-            this.SeasonHandleGroupBox.Controls.Add(this.SeasonLabel);
-            this.SeasonHandleGroupBox.Controls.Add(this.SeasonGoButton);
-            this.SeasonHandleGroupBox.Controls.Add(this.SeasonComboBox);
-            this.SeasonHandleGroupBox.Location = new System.Drawing.Point(581, 390);
-            this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
-            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(576, 195);
-            this.SeasonHandleGroupBox.TabIndex = 8;
-            this.SeasonHandleGroupBox.TabStop = false;
-            this.SeasonHandleGroupBox.Text = "Season Handle";
+            this.LenghtLabel.AutoSize = true;
+            this.LenghtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LenghtLabel.Location = new System.Drawing.Point(297, 26);
+            this.LenghtLabel.Name = "LenghtLabel";
+            this.LenghtLabel.Size = new System.Drawing.Size(56, 18);
+            this.LenghtLabel.TabIndex = 4;
+            this.LenghtLabel.Text = "Lenght:";
             // 
-            // SeasonComboBox
+            // ColorTextBox
             // 
-            this.SeasonComboBox.FormattingEnabled = true;
-            this.SeasonComboBox.Items.AddRange(new object[] {
-            "Winter",
-            "Spring",
-            "Summer",
-            "Autumn"});
-            this.SeasonComboBox.Location = new System.Drawing.Point(21, 78);
-            this.SeasonComboBox.Name = "SeasonComboBox";
-            this.SeasonComboBox.Size = new System.Drawing.Size(274, 24);
-            this.SeasonComboBox.TabIndex = 0;
+            this.ColorTextBox.Location = new System.Drawing.Point(300, 168);
+            this.ColorTextBox.Name = "ColorTextBox";
+            this.ColorTextBox.Size = new System.Drawing.Size(120, 22);
+            this.ColorTextBox.TabIndex = 3;
+            this.ColorTextBox.TextChanged += new System.EventHandler(this.ColorTextBox_TextChanged);
             // 
-            // SeasonGoButton
+            // WidthTextBox
             // 
-            this.SeasonGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SeasonGoButton.Location = new System.Drawing.Point(317, 73);
-            this.SeasonGoButton.Name = "SeasonGoButton";
-            this.SeasonGoButton.Size = new System.Drawing.Size(90, 30);
-            this.SeasonGoButton.TabIndex = 1;
-            this.SeasonGoButton.Text = "Go!";
-            this.SeasonGoButton.UseVisualStyleBackColor = true;
-            this.SeasonGoButton.Click += new System.EventHandler(this.SeasonGoButton_Click);
+            this.WidthTextBox.Location = new System.Drawing.Point(300, 108);
+            this.WidthTextBox.Name = "WidthTextBox";
+            this.WidthTextBox.Size = new System.Drawing.Size(120, 22);
+            this.WidthTextBox.TabIndex = 2;
+            this.WidthTextBox.TextChanged += new System.EventHandler(this.WidthTextBox_TextChanged);
             // 
-            // SeasonLabel
+            // LenghtTextBox
             // 
-            this.SeasonLabel.AutoSize = true;
-            this.SeasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SeasonLabel.Location = new System.Drawing.Point(17, 53);
-            this.SeasonLabel.Name = "SeasonLabel";
-            this.SeasonLabel.Size = new System.Drawing.Size(130, 20);
-            this.SeasonLabel.TabIndex = 2;
-            this.SeasonLabel.Text = "Choose season:";
+            this.LenghtTextBox.Location = new System.Drawing.Point(300, 47);
+            this.LenghtTextBox.Name = "LenghtTextBox";
+            this.LenghtTextBox.Size = new System.Drawing.Size(120, 22);
+            this.LenghtTextBox.TabIndex = 1;
+            this.LenghtTextBox.TextChanged += new System.EventHandler(this.LenghtTextBox_TextChanged);
+            // 
+            // RectangleListBox
+            // 
+            this.RectangleListBox.FormattingEnabled = true;
+            this.RectangleListBox.ItemHeight = 16;
+            this.RectangleListBox.Location = new System.Drawing.Point(18, 26);
+            this.RectangleListBox.Name = "RectangleListBox";
+            this.RectangleListBox.Size = new System.Drawing.Size(230, 244);
+            this.RectangleListBox.TabIndex = 0;
+            this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -256,20 +372,23 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "Programming Demo";
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageEnums.ResumeLayout(false);
+            this.SeasonHandleGroupBox.ResumeLayout(false);
+            this.SeasonHandleGroupBox.PerformLayout();
+            this.WeekdayParsingGroupBox.ResumeLayout(false);
+            this.WeekdayParsingGroupBox.PerformLayout();
             this.EnumarationGroupBox.ResumeLayout(false);
             this.EnumarationGroupBox.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.WeekdayParsingGroupBox.ResumeLayout(false);
-            this.WeekdayParsingGroupBox.PerformLayout();
-            this.SeasonHandleGroupBox.ResumeLayout(false);
-            this.SeasonHandleGroupBox.PerformLayout();
+            this.tabPageClasses.ResumeLayout(false);
+            this.RectGroupBox.ResumeLayout(false);
+            this.RectGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageEnums;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ListBox EnumsListBox;
         private System.Windows.Forms.TextBox ValueTextBox;
@@ -287,6 +406,16 @@
         private System.Windows.Forms.Label SeasonLabel;
         private System.Windows.Forms.Button SeasonGoButton;
         private System.Windows.Forms.ComboBox SeasonComboBox;
+        private System.Windows.Forms.TabPage tabPageClasses;
+        private System.Windows.Forms.TextBox ColorTextBox;
+        private System.Windows.Forms.TextBox WidthTextBox;
+        private System.Windows.Forms.TextBox LenghtTextBox;
+        private System.Windows.Forms.ListBox RectangleListBox;
+        private System.Windows.Forms.Label ColorLabel;
+        private System.Windows.Forms.Label WidthLabel;
+        private System.Windows.Forms.Label LenghtLabel;
+        private System.Windows.Forms.GroupBox RectGroupBox;
+        private System.Windows.Forms.Button FindRectangleButton;
     }
 }
 
