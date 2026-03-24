@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Programming2.Properties
+namespace Programming.Properties
 {
 
 
