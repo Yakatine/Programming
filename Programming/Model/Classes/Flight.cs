@@ -14,8 +14,7 @@ namespace Programming.Model.Classes
             get { return _flightTimeMinutes; }
             set
             {
-                if (value < 0)
-                    throw new ArgumentException("Время полёта не может быть отрицательным.");
+                Validator.AssertOnPositiveValue(value, nameof(FlightTimeMinutes));
                 _flightTimeMinutes = value;
             }
         }

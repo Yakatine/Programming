@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Programming.Model.Classes
 {
@@ -16,8 +17,7 @@ namespace Programming.Model.Classes
             get { return _durationMinutes; }
             set
             {
-                if (value < 0)
-                    throw new ArgumentException("Продолжительность не может быть отрицательной.");
+                Validator.AssertOnPositiveValue(value, nameof(DurationMinutes));
                 _durationMinutes = value;
             }
         }
@@ -26,8 +26,7 @@ namespace Programming.Model.Classes
             get { return _releaseYear; }
             set
             {
-                if (value < 1900 || value > DateTime.Now.Year)
-                    throw new ArgumentException($"Год выпуска должен быть в диапазоне [1900, {DateTime.Now.Year}].");
+                Validator.AssertValueInRange(value, 1900, DateTime.Now.Year, nameof(ReleaseYear));
                 _releaseYear = value;
             }
         }
@@ -36,8 +35,7 @@ namespace Programming.Model.Classes
             get { return _rating; }
             set
             {
-                if (value < 0 || value > 10)
-                    throw new ArgumentException("Рейтинг должен быть в диапазоне [0, 10].");
+                Validator.AssertValueInRange(value, 0, 10, nameof(Rating));
                 _rating = value;
             }
         }

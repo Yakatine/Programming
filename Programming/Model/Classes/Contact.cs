@@ -9,27 +9,29 @@ namespace Programming.Model.Classes
 {
     public class Contact
     {
-        private string _firstName;
-        private string _lastName;
+        private string _name;
+        private string _surname;
         private string _phoneNumber;
-        public string FirstName
+        public string Name
         {
-            get { return _firstName; }
+            get { return _name; }
             set
             {
-                if(string.IsNullOrWhiteSpace(value))
+                if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Имя не может быть пустым.");
-                _firstName = value;
+                AssertStringContainsOnlyLetters(value, "Name");
+                _name = value;
             }
         }
-        public string LastName
+        public string Surname
         {
-            get {  return _lastName; }
+            get { return _surname; }
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Фамилия не может быть пустой.");
-                _lastName = value;
+                AssertStringContainsOnlyLetters(value, "Surname");
+                _surname = value;
             }
         }
         public string PhoneNumber
@@ -45,9 +47,21 @@ namespace Programming.Model.Classes
         public Contact() { }
         public Contact(string firstName, string lastName, string phoneNumber)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            Name = firstName;
+            Surname = lastName;
             PhoneNumber = phoneNumber;
+        }
+        private void AssertStringContainsOnlyLetters(string value, string propertyName)
+        {
+            foreach (char c in value)
+            {
+                bool isEnglishLetter = (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
+                if (!isEnglishLetter)
+                {
+                    throw new ArgumentException(
+                        $"Значение {propertyName} должно содержать только буквы английского алфавита.");
+                }
+            }
         }
     }
 }

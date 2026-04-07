@@ -111,15 +111,14 @@ namespace Programming
             _rectangles = new Model.Classes.Rectangle[5];
             for (int i = 0; i < _rectangles.Length; i++)
             {
-                _rectangles[i] = new Model.Classes.Rectangle(rand.Next(1, 101), rand.Next(1, 101), colors[rand.Next(colors.Length)]);
+                _rectangles[i] = new Model.Classes.Rectangle(rand.Next(1, 101), rand.Next(1, 101), colors[rand.Next(colors.Length)],
+                    rand.Next(0,100), rand.Next(0,100));
             }
             for (int i = 0; i < _rectangles.Length; i++)
             {
                 RectangleListBox.Items.Add($"Rectangle {i + 1}");
             }
 
-            string[] titles = { "Avatar", "Titanic", "1+1", "Spider-man", "Interstellar" };
-            string[] genres = { "Action", "Romance", "Comedy", "Adventure", "Drama" };
             _films = new Film[5];
             _films[0] = new Film("Avatar", 162, 2009, "Adventure", Math.Round(rand.NextDouble() * 10, 1));
             _films[1] = new Film("Titanic", 194, 1997, "Romance", Math.Round(rand.NextDouble() * 10, 1));
@@ -137,6 +136,9 @@ namespace Programming
             if (index == -1) return;
             _currentRectangle = _rectangles[index];
             UpdateRectangleFields();
+            CenterXTextBox.Text = _currentRectangle.Center.X.ToString();
+            CenterYTextBox.Text = _currentRectangle.Center.Y.ToString();
+            RectangleIdTextBox.Text = _currentRectangle.Id.ToString();
         }
         private bool _isUpdating = false;
 

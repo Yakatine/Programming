@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Programming.Model.Classes
 {
@@ -26,8 +27,7 @@ namespace Programming.Model.Classes
             get { return _semester; }
             set
             {
-                if (value < 1 || value > 8)
-                    throw new ArgumentException("Семестр должен быть от 1 до 8.");
+                Validator.AssertValueInRange(value, 1, 8, nameof(Semester));
                 _semester = value;
             }
         }
@@ -36,8 +36,7 @@ namespace Programming.Model.Classes
             get { return _grade; }
             set
             {
-                if (value < 2 || value > 5)
-                    throw new ArgumentException("Оценка должна быть от 2 до 5.");
+                Validator.AssertValueInRange(value, 2, 5, nameof(Grade));
                 _grade = value;
             }
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Programming.Model.Classes
 {
@@ -16,8 +17,7 @@ namespace Programming.Model.Classes
             get { return _hours; }
             set
             {
-                if (value < 0 || value > 23)
-                    throw new ArgumentException("Часы должны быть в диапазоне [0, 23].");
+                Validator.AssertValueInRange(value, 0, 23, nameof(Hours));
                 _hours = value;
             }
         }
@@ -26,8 +26,7 @@ namespace Programming.Model.Classes
             get { return _minutes; }
             set
             {
-                if (value < 0 || value > 59)
-                    throw new ArgumentException("Минуты должны быть в диапазоне [0, 59].");
+                Validator.AssertValueInRange(value, 0, 59, nameof(Minutes));
                 _minutes = value;
             }
         }
@@ -36,8 +35,7 @@ namespace Programming.Model.Classes
             get { return _seconds; }
             set
             {
-                if (value < 0 || value > 59)
-                    throw new ArgumentException("Секунды должны быть в диапазоне [0, 59].");
+                Validator.AssertValueInRange(value, 0, 59, nameof(Seconds));
                 _seconds = value;
             }
         }

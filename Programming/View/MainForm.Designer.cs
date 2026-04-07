@@ -47,6 +47,19 @@
             this.EnumsListBox = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageClasses = new System.Windows.Forms.TabPage();
+            this.FilmsGroupBox = new System.Windows.Forms.GroupBox();
+            this.FindFilmButton = new System.Windows.Forms.Button();
+            this.RatingLabel = new System.Windows.Forms.Label();
+            this.RatingTextBox = new System.Windows.Forms.TextBox();
+            this.ReleaseYearLabel = new System.Windows.Forms.Label();
+            this.DurationMinutesLabel = new System.Windows.Forms.Label();
+            this.GenreLabel = new System.Windows.Forms.Label();
+            this.ReleaseYearTextBox = new System.Windows.Forms.TextBox();
+            this.DurationTextBox = new System.Windows.Forms.TextBox();
+            this.GenreFilmTextBox = new System.Windows.Forms.TextBox();
+            this.TitleFilmTextBox = new System.Windows.Forms.TextBox();
+            this.labelTitleFilm = new System.Windows.Forms.Label();
+            this.FilmsListBox = new System.Windows.Forms.ListBox();
             this.RectGroupBox = new System.Windows.Forms.GroupBox();
             this.FindRectangleButton = new System.Windows.Forms.Button();
             this.ColorLabel = new System.Windows.Forms.Label();
@@ -56,27 +69,20 @@
             this.WidthTextBox = new System.Windows.Forms.TextBox();
             this.LenghtTextBox = new System.Windows.Forms.TextBox();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
-            this.FilmsListBox = new System.Windows.Forms.ListBox();
-            this.labelTitleFilm = new System.Windows.Forms.Label();
-            this.TitleFilmTextBox = new System.Windows.Forms.TextBox();
-            this.GenreFilmTextBox = new System.Windows.Forms.TextBox();
-            this.DurationTextBox = new System.Windows.Forms.TextBox();
-            this.ReleaseYearTextBox = new System.Windows.Forms.TextBox();
-            this.GenreLabel = new System.Windows.Forms.Label();
-            this.DurationMinutesLabel = new System.Windows.Forms.Label();
-            this.ReleaseYearLabel = new System.Windows.Forms.Label();
-            this.RatingTextBox = new System.Windows.Forms.TextBox();
-            this.RatingLabel = new System.Windows.Forms.Label();
-            this.FilmsGroupBox = new System.Windows.Forms.GroupBox();
-            this.FindFilmButton = new System.Windows.Forms.Button();
+            this.CenterXTextBox = new System.Windows.Forms.TextBox();
+            this.CenterYTextBox = new System.Windows.Forms.TextBox();
+            this.CenterXLabel = new System.Windows.Forms.Label();
+            this.CenterYLabel = new System.Windows.Forms.Label();
+            this.RectangleIdTextBox = new System.Windows.Forms.TextBox();
+            this.RectangleIdLabel = new System.Windows.Forms.Label();
             this.tabPageEnums.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
             this.WeekdayParsingGroupBox.SuspendLayout();
             this.EnumarationGroupBox.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageClasses.SuspendLayout();
-            this.RectGroupBox.SuspendLayout();
             this.FilmsGroupBox.SuspendLayout();
+            this.RectGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageEnums
@@ -287,208 +293,6 @@
             this.tabPageClasses.Text = "Classes";
             this.tabPageClasses.UseVisualStyleBackColor = true;
             // 
-            // RectGroupBox
-            // 
-            this.RectGroupBox.Controls.Add(this.FindRectangleButton);
-            this.RectGroupBox.Controls.Add(this.ColorLabel);
-            this.RectGroupBox.Controls.Add(this.WidthLabel);
-            this.RectGroupBox.Controls.Add(this.LenghtLabel);
-            this.RectGroupBox.Controls.Add(this.ColorTextBox);
-            this.RectGroupBox.Controls.Add(this.WidthTextBox);
-            this.RectGroupBox.Controls.Add(this.LenghtTextBox);
-            this.RectGroupBox.Controls.Add(this.RectangleListBox);
-            this.RectGroupBox.Location = new System.Drawing.Point(29, 34);
-            this.RectGroupBox.Name = "RectGroupBox";
-            this.RectGroupBox.Size = new System.Drawing.Size(482, 299);
-            this.RectGroupBox.TabIndex = 8;
-            this.RectGroupBox.TabStop = false;
-            this.RectGroupBox.Text = "Rectangles";
-            // 
-            // FindRectangleButton
-            // 
-            this.FindRectangleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FindRectangleButton.Location = new System.Drawing.Point(300, 234);
-            this.FindRectangleButton.Name = "FindRectangleButton";
-            this.FindRectangleButton.Size = new System.Drawing.Size(120, 36);
-            this.FindRectangleButton.TabIndex = 7;
-            this.FindRectangleButton.Text = "Find";
-            this.FindRectangleButton.UseVisualStyleBackColor = true;
-            this.FindRectangleButton.Click += new System.EventHandler(this.FindRectangleButton_Click);
-            // 
-            // ColorLabel
-            // 
-            this.ColorLabel.AutoSize = true;
-            this.ColorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ColorLabel.Location = new System.Drawing.Point(297, 147);
-            this.ColorLabel.Name = "ColorLabel";
-            this.ColorLabel.Size = new System.Drawing.Size(49, 18);
-            this.ColorLabel.TabIndex = 6;
-            this.ColorLabel.Text = "Color:";
-            // 
-            // WidthLabel
-            // 
-            this.WidthLabel.AutoSize = true;
-            this.WidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.WidthLabel.Location = new System.Drawing.Point(297, 89);
-            this.WidthLabel.Name = "WidthLabel";
-            this.WidthLabel.Size = new System.Drawing.Size(50, 18);
-            this.WidthLabel.TabIndex = 5;
-            this.WidthLabel.Text = "Width:";
-            // 
-            // LenghtLabel
-            // 
-            this.LenghtLabel.AutoSize = true;
-            this.LenghtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LenghtLabel.Location = new System.Drawing.Point(297, 26);
-            this.LenghtLabel.Name = "LenghtLabel";
-            this.LenghtLabel.Size = new System.Drawing.Size(56, 18);
-            this.LenghtLabel.TabIndex = 4;
-            this.LenghtLabel.Text = "Lenght:";
-            // 
-            // ColorTextBox
-            // 
-            this.ColorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ColorTextBox.Location = new System.Drawing.Point(300, 168);
-            this.ColorTextBox.Name = "ColorTextBox";
-            this.ColorTextBox.Size = new System.Drawing.Size(120, 27);
-            this.ColorTextBox.TabIndex = 3;
-            this.ColorTextBox.TextChanged += new System.EventHandler(this.ColorTextBox_TextChanged);
-            // 
-            // WidthTextBox
-            // 
-            this.WidthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.WidthTextBox.Location = new System.Drawing.Point(300, 108);
-            this.WidthTextBox.Name = "WidthTextBox";
-            this.WidthTextBox.Size = new System.Drawing.Size(120, 27);
-            this.WidthTextBox.TabIndex = 2;
-            this.WidthTextBox.TextChanged += new System.EventHandler(this.WidthTextBox_TextChanged);
-            // 
-            // LenghtTextBox
-            // 
-            this.LenghtTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LenghtTextBox.Location = new System.Drawing.Point(300, 47);
-            this.LenghtTextBox.Name = "LenghtTextBox";
-            this.LenghtTextBox.Size = new System.Drawing.Size(120, 27);
-            this.LenghtTextBox.TabIndex = 1;
-            this.LenghtTextBox.TextChanged += new System.EventHandler(this.LenghtTextBox_TextChanged);
-            // 
-            // RectangleListBox
-            // 
-            this.RectangleListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RectangleListBox.FormattingEnabled = true;
-            this.RectangleListBox.ItemHeight = 20;
-            this.RectangleListBox.Location = new System.Drawing.Point(18, 26);
-            this.RectangleListBox.Name = "RectangleListBox";
-            this.RectangleListBox.Size = new System.Drawing.Size(230, 244);
-            this.RectangleListBox.TabIndex = 0;
-            this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
-            // 
-            // FilmsListBox
-            // 
-            this.FilmsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FilmsListBox.FormattingEnabled = true;
-            this.FilmsListBox.ItemHeight = 20;
-            this.FilmsListBox.Location = new System.Drawing.Point(29, 22);
-            this.FilmsListBox.Name = "FilmsListBox";
-            this.FilmsListBox.Size = new System.Drawing.Size(230, 244);
-            this.FilmsListBox.TabIndex = 9;
-            this.FilmsListBox.SelectedIndexChanged += new System.EventHandler(this.FilmsListBox_SelectedIndexChanged);
-            // 
-            // labelTitleFilm
-            // 
-            this.labelTitleFilm.AutoSize = true;
-            this.labelTitleFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTitleFilm.Location = new System.Drawing.Point(314, 22);
-            this.labelTitleFilm.Name = "labelTitleFilm";
-            this.labelTitleFilm.Size = new System.Drawing.Size(39, 18);
-            this.labelTitleFilm.TabIndex = 10;
-            this.labelTitleFilm.Text = "Title:";
-            // 
-            // TitleFilmTextBox
-            // 
-            this.TitleFilmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleFilmTextBox.Location = new System.Drawing.Point(317, 43);
-            this.TitleFilmTextBox.Name = "TitleFilmTextBox";
-            this.TitleFilmTextBox.Size = new System.Drawing.Size(113, 27);
-            this.TitleFilmTextBox.TabIndex = 11;
-            this.TitleFilmTextBox.TextChanged += new System.EventHandler(this.TitleFilmTextBox_TextChanged);
-            // 
-            // GenreFilmTextBox
-            // 
-            this.GenreFilmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GenreFilmTextBox.Location = new System.Drawing.Point(317, 104);
-            this.GenreFilmTextBox.Name = "GenreFilmTextBox";
-            this.GenreFilmTextBox.Size = new System.Drawing.Size(113, 27);
-            this.GenreFilmTextBox.TabIndex = 12;
-            this.GenreFilmTextBox.TextChanged += new System.EventHandler(this.GenreFilmTextBox_TextChanged);
-            // 
-            // DurationTextBox
-            // 
-            this.DurationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DurationTextBox.Location = new System.Drawing.Point(317, 164);
-            this.DurationTextBox.Name = "DurationTextBox";
-            this.DurationTextBox.Size = new System.Drawing.Size(113, 27);
-            this.DurationTextBox.TabIndex = 13;
-            this.DurationTextBox.TextChanged += new System.EventHandler(this.DurationTextBox_TextChanged);
-            // 
-            // ReleaseYearTextBox
-            // 
-            this.ReleaseYearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReleaseYearTextBox.Location = new System.Drawing.Point(464, 43);
-            this.ReleaseYearTextBox.Name = "ReleaseYearTextBox";
-            this.ReleaseYearTextBox.Size = new System.Drawing.Size(113, 27);
-            this.ReleaseYearTextBox.TabIndex = 14;
-            this.ReleaseYearTextBox.TextChanged += new System.EventHandler(this.ReleaseYearTextBox_TextChanged);
-            // 
-            // GenreLabel
-            // 
-            this.GenreLabel.AutoSize = true;
-            this.GenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GenreLabel.Location = new System.Drawing.Point(314, 85);
-            this.GenreLabel.Name = "GenreLabel";
-            this.GenreLabel.Size = new System.Drawing.Size(53, 18);
-            this.GenreLabel.TabIndex = 15;
-            this.GenreLabel.Text = "Genre:";
-            // 
-            // DurationMinutesLabel
-            // 
-            this.DurationMinutesLabel.AutoSize = true;
-            this.DurationMinutesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DurationMinutesLabel.Location = new System.Drawing.Point(314, 143);
-            this.DurationMinutesLabel.Name = "DurationMinutesLabel";
-            this.DurationMinutesLabel.Size = new System.Drawing.Size(124, 18);
-            this.DurationMinutesLabel.TabIndex = 16;
-            this.DurationMinutesLabel.Text = "Duration minutes:";
-            // 
-            // ReleaseYearLabel
-            // 
-            this.ReleaseYearLabel.AutoSize = true;
-            this.ReleaseYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReleaseYearLabel.Location = new System.Drawing.Point(464, 25);
-            this.ReleaseYearLabel.Name = "ReleaseYearLabel";
-            this.ReleaseYearLabel.Size = new System.Drawing.Size(42, 18);
-            this.ReleaseYearLabel.TabIndex = 17;
-            this.ReleaseYearLabel.Text = "Year:";
-            // 
-            // RatingTextBox
-            // 
-            this.RatingTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RatingTextBox.Location = new System.Drawing.Point(464, 104);
-            this.RatingTextBox.Name = "RatingTextBox";
-            this.RatingTextBox.Size = new System.Drawing.Size(113, 27);
-            this.RatingTextBox.TabIndex = 18;
-            this.RatingTextBox.TextChanged += new System.EventHandler(this.RatingTextBox_TextChanged);
-            // 
-            // RatingLabel
-            // 
-            this.RatingLabel.AutoSize = true;
-            this.RatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RatingLabel.Location = new System.Drawing.Point(466, 86);
-            this.RatingLabel.Name = "RatingLabel";
-            this.RatingLabel.Size = new System.Drawing.Size(54, 18);
-            this.RatingLabel.TabIndex = 19;
-            this.RatingLabel.Text = "Rating:";
-            // 
             // FilmsGroupBox
             // 
             this.FilmsGroupBox.Controls.Add(this.FindFilmButton);
@@ -522,6 +326,271 @@
             this.FindFilmButton.UseVisualStyleBackColor = true;
             this.FindFilmButton.Click += new System.EventHandler(this.FindFilmButton_Click);
             // 
+            // RatingLabel
+            // 
+            this.RatingLabel.AutoSize = true;
+            this.RatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RatingLabel.Location = new System.Drawing.Point(466, 86);
+            this.RatingLabel.Name = "RatingLabel";
+            this.RatingLabel.Size = new System.Drawing.Size(54, 18);
+            this.RatingLabel.TabIndex = 19;
+            this.RatingLabel.Text = "Rating:";
+            // 
+            // RatingTextBox
+            // 
+            this.RatingTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RatingTextBox.Location = new System.Drawing.Point(464, 104);
+            this.RatingTextBox.Name = "RatingTextBox";
+            this.RatingTextBox.Size = new System.Drawing.Size(113, 27);
+            this.RatingTextBox.TabIndex = 18;
+            this.RatingTextBox.TextChanged += new System.EventHandler(this.RatingTextBox_TextChanged);
+            // 
+            // ReleaseYearLabel
+            // 
+            this.ReleaseYearLabel.AutoSize = true;
+            this.ReleaseYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReleaseYearLabel.Location = new System.Drawing.Point(464, 25);
+            this.ReleaseYearLabel.Name = "ReleaseYearLabel";
+            this.ReleaseYearLabel.Size = new System.Drawing.Size(42, 18);
+            this.ReleaseYearLabel.TabIndex = 17;
+            this.ReleaseYearLabel.Text = "Year:";
+            // 
+            // DurationMinutesLabel
+            // 
+            this.DurationMinutesLabel.AutoSize = true;
+            this.DurationMinutesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DurationMinutesLabel.Location = new System.Drawing.Point(314, 143);
+            this.DurationMinutesLabel.Name = "DurationMinutesLabel";
+            this.DurationMinutesLabel.Size = new System.Drawing.Size(124, 18);
+            this.DurationMinutesLabel.TabIndex = 16;
+            this.DurationMinutesLabel.Text = "Duration minutes:";
+            // 
+            // GenreLabel
+            // 
+            this.GenreLabel.AutoSize = true;
+            this.GenreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GenreLabel.Location = new System.Drawing.Point(314, 85);
+            this.GenreLabel.Name = "GenreLabel";
+            this.GenreLabel.Size = new System.Drawing.Size(53, 18);
+            this.GenreLabel.TabIndex = 15;
+            this.GenreLabel.Text = "Genre:";
+            // 
+            // ReleaseYearTextBox
+            // 
+            this.ReleaseYearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReleaseYearTextBox.Location = new System.Drawing.Point(464, 43);
+            this.ReleaseYearTextBox.Name = "ReleaseYearTextBox";
+            this.ReleaseYearTextBox.Size = new System.Drawing.Size(113, 27);
+            this.ReleaseYearTextBox.TabIndex = 14;
+            this.ReleaseYearTextBox.TextChanged += new System.EventHandler(this.ReleaseYearTextBox_TextChanged);
+            // 
+            // DurationTextBox
+            // 
+            this.DurationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DurationTextBox.Location = new System.Drawing.Point(317, 164);
+            this.DurationTextBox.Name = "DurationTextBox";
+            this.DurationTextBox.Size = new System.Drawing.Size(113, 27);
+            this.DurationTextBox.TabIndex = 13;
+            this.DurationTextBox.TextChanged += new System.EventHandler(this.DurationTextBox_TextChanged);
+            // 
+            // GenreFilmTextBox
+            // 
+            this.GenreFilmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GenreFilmTextBox.Location = new System.Drawing.Point(317, 104);
+            this.GenreFilmTextBox.Name = "GenreFilmTextBox";
+            this.GenreFilmTextBox.Size = new System.Drawing.Size(113, 27);
+            this.GenreFilmTextBox.TabIndex = 12;
+            this.GenreFilmTextBox.TextChanged += new System.EventHandler(this.GenreFilmTextBox_TextChanged);
+            // 
+            // TitleFilmTextBox
+            // 
+            this.TitleFilmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TitleFilmTextBox.Location = new System.Drawing.Point(317, 43);
+            this.TitleFilmTextBox.Name = "TitleFilmTextBox";
+            this.TitleFilmTextBox.Size = new System.Drawing.Size(113, 27);
+            this.TitleFilmTextBox.TabIndex = 11;
+            this.TitleFilmTextBox.TextChanged += new System.EventHandler(this.TitleFilmTextBox_TextChanged);
+            // 
+            // labelTitleFilm
+            // 
+            this.labelTitleFilm.AutoSize = true;
+            this.labelTitleFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTitleFilm.Location = new System.Drawing.Point(314, 22);
+            this.labelTitleFilm.Name = "labelTitleFilm";
+            this.labelTitleFilm.Size = new System.Drawing.Size(39, 18);
+            this.labelTitleFilm.TabIndex = 10;
+            this.labelTitleFilm.Text = "Title:";
+            // 
+            // FilmsListBox
+            // 
+            this.FilmsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FilmsListBox.FormattingEnabled = true;
+            this.FilmsListBox.ItemHeight = 20;
+            this.FilmsListBox.Location = new System.Drawing.Point(29, 22);
+            this.FilmsListBox.Name = "FilmsListBox";
+            this.FilmsListBox.Size = new System.Drawing.Size(230, 244);
+            this.FilmsListBox.TabIndex = 9;
+            this.FilmsListBox.SelectedIndexChanged += new System.EventHandler(this.FilmsListBox_SelectedIndexChanged);
+            // 
+            // RectGroupBox
+            // 
+            this.RectGroupBox.Controls.Add(this.RectangleIdLabel);
+            this.RectGroupBox.Controls.Add(this.RectangleIdTextBox);
+            this.RectGroupBox.Controls.Add(this.CenterYLabel);
+            this.RectGroupBox.Controls.Add(this.CenterXLabel);
+            this.RectGroupBox.Controls.Add(this.CenterYTextBox);
+            this.RectGroupBox.Controls.Add(this.CenterXTextBox);
+            this.RectGroupBox.Controls.Add(this.FindRectangleButton);
+            this.RectGroupBox.Controls.Add(this.ColorLabel);
+            this.RectGroupBox.Controls.Add(this.WidthLabel);
+            this.RectGroupBox.Controls.Add(this.LenghtLabel);
+            this.RectGroupBox.Controls.Add(this.ColorTextBox);
+            this.RectGroupBox.Controls.Add(this.WidthTextBox);
+            this.RectGroupBox.Controls.Add(this.LenghtTextBox);
+            this.RectGroupBox.Controls.Add(this.RectangleListBox);
+            this.RectGroupBox.Location = new System.Drawing.Point(29, 34);
+            this.RectGroupBox.Name = "RectGroupBox";
+            this.RectGroupBox.Size = new System.Drawing.Size(505, 299);
+            this.RectGroupBox.TabIndex = 8;
+            this.RectGroupBox.TabStop = false;
+            this.RectGroupBox.Text = "Rectangles";
+            // 
+            // FindRectangleButton
+            // 
+            this.FindRectangleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FindRectangleButton.Location = new System.Drawing.Point(300, 234);
+            this.FindRectangleButton.Name = "FindRectangleButton";
+            this.FindRectangleButton.Size = new System.Drawing.Size(120, 36);
+            this.FindRectangleButton.TabIndex = 7;
+            this.FindRectangleButton.Text = "Find";
+            this.FindRectangleButton.UseVisualStyleBackColor = true;
+            this.FindRectangleButton.Click += new System.EventHandler(this.FindRectangleButton_Click);
+            // 
+            // ColorLabel
+            // 
+            this.ColorLabel.AutoSize = true;
+            this.ColorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColorLabel.Location = new System.Drawing.Point(231, 143);
+            this.ColorLabel.Name = "ColorLabel";
+            this.ColorLabel.Size = new System.Drawing.Size(49, 18);
+            this.ColorLabel.TabIndex = 6;
+            this.ColorLabel.Text = "Color:";
+            // 
+            // WidthLabel
+            // 
+            this.WidthLabel.AutoSize = true;
+            this.WidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WidthLabel.Location = new System.Drawing.Point(231, 85);
+            this.WidthLabel.Name = "WidthLabel";
+            this.WidthLabel.Size = new System.Drawing.Size(50, 18);
+            this.WidthLabel.TabIndex = 5;
+            this.WidthLabel.Text = "Width:";
+            // 
+            // LenghtLabel
+            // 
+            this.LenghtLabel.AutoSize = true;
+            this.LenghtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LenghtLabel.Location = new System.Drawing.Point(231, 22);
+            this.LenghtLabel.Name = "LenghtLabel";
+            this.LenghtLabel.Size = new System.Drawing.Size(56, 18);
+            this.LenghtLabel.TabIndex = 4;
+            this.LenghtLabel.Text = "Lenght:";
+            // 
+            // ColorTextBox
+            // 
+            this.ColorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ColorTextBox.Location = new System.Drawing.Point(234, 164);
+            this.ColorTextBox.Name = "ColorTextBox";
+            this.ColorTextBox.Size = new System.Drawing.Size(120, 27);
+            this.ColorTextBox.TabIndex = 3;
+            this.ColorTextBox.TextChanged += new System.EventHandler(this.ColorTextBox_TextChanged);
+            // 
+            // WidthTextBox
+            // 
+            this.WidthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WidthTextBox.Location = new System.Drawing.Point(234, 104);
+            this.WidthTextBox.Name = "WidthTextBox";
+            this.WidthTextBox.Size = new System.Drawing.Size(120, 27);
+            this.WidthTextBox.TabIndex = 2;
+            this.WidthTextBox.TextChanged += new System.EventHandler(this.WidthTextBox_TextChanged);
+            // 
+            // LenghtTextBox
+            // 
+            this.LenghtTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LenghtTextBox.Location = new System.Drawing.Point(234, 43);
+            this.LenghtTextBox.Name = "LenghtTextBox";
+            this.LenghtTextBox.Size = new System.Drawing.Size(120, 27);
+            this.LenghtTextBox.TabIndex = 1;
+            this.LenghtTextBox.TextChanged += new System.EventHandler(this.LenghtTextBox_TextChanged);
+            // 
+            // RectangleListBox
+            // 
+            this.RectangleListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RectangleListBox.FormattingEnabled = true;
+            this.RectangleListBox.ItemHeight = 20;
+            this.RectangleListBox.Location = new System.Drawing.Point(18, 26);
+            this.RectangleListBox.Name = "RectangleListBox";
+            this.RectangleListBox.Size = new System.Drawing.Size(197, 244);
+            this.RectangleListBox.TabIndex = 0;
+            this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
+            // 
+            // CenterXTextBox
+            // 
+            this.CenterXTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterXTextBox.Location = new System.Drawing.Point(370, 43);
+            this.CenterXTextBox.Name = "CenterXTextBox";
+            this.CenterXTextBox.ReadOnly = true;
+            this.CenterXTextBox.Size = new System.Drawing.Size(120, 27);
+            this.CenterXTextBox.TabIndex = 8;
+            // 
+            // CenterYTextBox
+            // 
+            this.CenterYTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterYTextBox.Location = new System.Drawing.Point(370, 104);
+            this.CenterYTextBox.Name = "CenterYTextBox";
+            this.CenterYTextBox.ReadOnly = true;
+            this.CenterYTextBox.Size = new System.Drawing.Size(120, 27);
+            this.CenterYTextBox.TabIndex = 9;
+            // 
+            // CenterXLabel
+            // 
+            this.CenterXLabel.AutoSize = true;
+            this.CenterXLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterXLabel.Location = new System.Drawing.Point(367, 22);
+            this.CenterXLabel.Name = "CenterXLabel";
+            this.CenterXLabel.Size = new System.Drawing.Size(70, 18);
+            this.CenterXLabel.TabIndex = 10;
+            this.CenterXLabel.Text = "Center X:";
+            // 
+            // CenterYLabel
+            // 
+            this.CenterYLabel.AutoSize = true;
+            this.CenterYLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterYLabel.Location = new System.Drawing.Point(367, 85);
+            this.CenterYLabel.Name = "CenterYLabel";
+            this.CenterYLabel.Size = new System.Drawing.Size(69, 18);
+            this.CenterYLabel.TabIndex = 11;
+            this.CenterYLabel.Text = "Center Y:";
+            // 
+            // RectangleIdTextBox
+            // 
+            this.RectangleIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RectangleIdTextBox.Location = new System.Drawing.Point(370, 164);
+            this.RectangleIdTextBox.Name = "RectangleIdTextBox";
+            this.RectangleIdTextBox.ReadOnly = true;
+            this.RectangleIdTextBox.Size = new System.Drawing.Size(120, 27);
+            this.RectangleIdTextBox.TabIndex = 12;
+            // 
+            // RectangleIdLabel
+            // 
+            this.RectangleIdLabel.AutoSize = true;
+            this.RectangleIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RectangleIdLabel.Location = new System.Drawing.Point(367, 143);
+            this.RectangleIdLabel.Name = "RectangleIdLabel";
+            this.RectangleIdLabel.Size = new System.Drawing.Size(23, 18);
+            this.RectangleIdLabel.TabIndex = 13;
+            this.RectangleIdLabel.Text = "Id:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -539,10 +608,10 @@
             this.EnumarationGroupBox.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageClasses.ResumeLayout(false);
-            this.RectGroupBox.ResumeLayout(false);
-            this.RectGroupBox.PerformLayout();
             this.FilmsGroupBox.ResumeLayout(false);
             this.FilmsGroupBox.PerformLayout();
+            this.RectGroupBox.ResumeLayout(false);
+            this.RectGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -589,6 +658,12 @@
         private System.Windows.Forms.GroupBox FilmsGroupBox;
         private System.Windows.Forms.Label RatingLabel;
         private System.Windows.Forms.Button FindFilmButton;
+        private System.Windows.Forms.Label CenterYLabel;
+        private System.Windows.Forms.Label CenterXLabel;
+        private System.Windows.Forms.TextBox CenterYTextBox;
+        private System.Windows.Forms.TextBox CenterXTextBox;
+        private System.Windows.Forms.Label RectangleIdLabel;
+        private System.Windows.Forms.TextBox RectangleIdTextBox;
     }
 }
 
