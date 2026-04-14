@@ -61,6 +61,12 @@
             this.labelTitleFilm = new System.Windows.Forms.Label();
             this.FilmsListBox = new System.Windows.Forms.ListBox();
             this.RectGroupBox = new System.Windows.Forms.GroupBox();
+            this.RectangleIdLabel = new System.Windows.Forms.Label();
+            this.RectangleIdTextBox = new System.Windows.Forms.TextBox();
+            this.CenterYLabel = new System.Windows.Forms.Label();
+            this.CenterXLabel = new System.Windows.Forms.Label();
+            this.CenterYTextBox = new System.Windows.Forms.TextBox();
+            this.CenterXTextBox = new System.Windows.Forms.TextBox();
             this.FindRectangleButton = new System.Windows.Forms.Button();
             this.ColorLabel = new System.Windows.Forms.Label();
             this.WidthLabel = new System.Windows.Forms.Label();
@@ -69,12 +75,21 @@
             this.WidthTextBox = new System.Windows.Forms.TextBox();
             this.LenghtTextBox = new System.Windows.Forms.TextBox();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
-            this.CenterXTextBox = new System.Windows.Forms.TextBox();
-            this.CenterYTextBox = new System.Windows.Forms.TextBox();
-            this.CenterXLabel = new System.Windows.Forms.Label();
-            this.CenterYLabel = new System.Windows.Forms.Label();
-            this.RectangleIdTextBox = new System.Windows.Forms.TextBox();
-            this.RectangleIdLabel = new System.Windows.Forms.Label();
+            this.tabPageRectangles = new System.Windows.Forms.TabPage();
+            this.txtWigthLabel = new System.Windows.Forms.Label();
+            this.txtLengthLabel = new System.Windows.Forms.Label();
+            this.txtYLabel = new System.Windows.Forms.Label();
+            this.txtXLabel = new System.Windows.Forms.Label();
+            this.txtIdLabel = new System.Windows.Forms.Label();
+            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.txtLenght = new System.Windows.Forms.TextBox();
+            this.txtY = new System.Windows.Forms.TextBox();
+            this.txtX = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.listBoxRectangles = new System.Windows.Forms.ListBox();
+            this.CanvasPanel = new System.Windows.Forms.Panel();
             this.tabPageEnums.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
             this.WeekdayParsingGroupBox.SuspendLayout();
@@ -83,6 +98,7 @@
             this.tabPageClasses.SuspendLayout();
             this.FilmsGroupBox.SuspendLayout();
             this.RectGroupBox.SuspendLayout();
+            this.tabPageRectangles.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageEnums
@@ -274,6 +290,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageEnums);
             this.tabControl1.Controls.Add(this.tabPageClasses);
+            this.tabControl1.Controls.Add(this.tabPageRectangles);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -455,6 +472,63 @@
             this.RectGroupBox.TabStop = false;
             this.RectGroupBox.Text = "Rectangles";
             // 
+            // RectangleIdLabel
+            // 
+            this.RectangleIdLabel.AutoSize = true;
+            this.RectangleIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RectangleIdLabel.Location = new System.Drawing.Point(367, 143);
+            this.RectangleIdLabel.Name = "RectangleIdLabel";
+            this.RectangleIdLabel.Size = new System.Drawing.Size(23, 18);
+            this.RectangleIdLabel.TabIndex = 13;
+            this.RectangleIdLabel.Text = "Id:";
+            // 
+            // RectangleIdTextBox
+            // 
+            this.RectangleIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RectangleIdTextBox.Location = new System.Drawing.Point(370, 164);
+            this.RectangleIdTextBox.Name = "RectangleIdTextBox";
+            this.RectangleIdTextBox.ReadOnly = true;
+            this.RectangleIdTextBox.Size = new System.Drawing.Size(120, 27);
+            this.RectangleIdTextBox.TabIndex = 12;
+            // 
+            // CenterYLabel
+            // 
+            this.CenterYLabel.AutoSize = true;
+            this.CenterYLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterYLabel.Location = new System.Drawing.Point(367, 85);
+            this.CenterYLabel.Name = "CenterYLabel";
+            this.CenterYLabel.Size = new System.Drawing.Size(69, 18);
+            this.CenterYLabel.TabIndex = 11;
+            this.CenterYLabel.Text = "Center Y:";
+            // 
+            // CenterXLabel
+            // 
+            this.CenterXLabel.AutoSize = true;
+            this.CenterXLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterXLabel.Location = new System.Drawing.Point(367, 22);
+            this.CenterXLabel.Name = "CenterXLabel";
+            this.CenterXLabel.Size = new System.Drawing.Size(70, 18);
+            this.CenterXLabel.TabIndex = 10;
+            this.CenterXLabel.Text = "Center X:";
+            // 
+            // CenterYTextBox
+            // 
+            this.CenterYTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterYTextBox.Location = new System.Drawing.Point(370, 104);
+            this.CenterYTextBox.Name = "CenterYTextBox";
+            this.CenterYTextBox.ReadOnly = true;
+            this.CenterYTextBox.Size = new System.Drawing.Size(120, 27);
+            this.CenterYTextBox.TabIndex = 9;
+            // 
+            // CenterXTextBox
+            // 
+            this.CenterXTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CenterXTextBox.Location = new System.Drawing.Point(370, 43);
+            this.CenterXTextBox.Name = "CenterXTextBox";
+            this.CenterXTextBox.ReadOnly = true;
+            this.CenterXTextBox.Size = new System.Drawing.Size(120, 27);
+            this.CenterXTextBox.TabIndex = 8;
+            // 
             // FindRectangleButton
             // 
             this.FindRectangleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -534,62 +608,160 @@
             this.RectangleListBox.TabIndex = 0;
             this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
-            // CenterXTextBox
+            // tabPageRectangles
             // 
-            this.CenterXTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CenterXTextBox.Location = new System.Drawing.Point(370, 43);
-            this.CenterXTextBox.Name = "CenterXTextBox";
-            this.CenterXTextBox.ReadOnly = true;
-            this.CenterXTextBox.Size = new System.Drawing.Size(120, 27);
-            this.CenterXTextBox.TabIndex = 8;
+            this.tabPageRectangles.Controls.Add(this.txtWigthLabel);
+            this.tabPageRectangles.Controls.Add(this.txtLengthLabel);
+            this.tabPageRectangles.Controls.Add(this.txtYLabel);
+            this.tabPageRectangles.Controls.Add(this.txtXLabel);
+            this.tabPageRectangles.Controls.Add(this.txtIdLabel);
+            this.tabPageRectangles.Controls.Add(this.txtWidth);
+            this.tabPageRectangles.Controls.Add(this.txtLenght);
+            this.tabPageRectangles.Controls.Add(this.txtY);
+            this.tabPageRectangles.Controls.Add(this.txtX);
+            this.tabPageRectangles.Controls.Add(this.txtId);
+            this.tabPageRectangles.Controls.Add(this.RemoveButton);
+            this.tabPageRectangles.Controls.Add(this.AddButton);
+            this.tabPageRectangles.Controls.Add(this.listBoxRectangles);
+            this.tabPageRectangles.Controls.Add(this.CanvasPanel);
+            this.tabPageRectangles.Location = new System.Drawing.Point(4, 25);
+            this.tabPageRectangles.Name = "tabPageRectangles";
+            this.tabPageRectangles.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRectangles.Size = new System.Drawing.Size(1174, 594);
+            this.tabPageRectangles.TabIndex = 2;
+            this.tabPageRectangles.Text = "Rectangles";
+            this.tabPageRectangles.UseVisualStyleBackColor = true;
             // 
-            // CenterYTextBox
+            // txtWigthLabel
             // 
-            this.CenterYTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CenterYTextBox.Location = new System.Drawing.Point(370, 104);
-            this.CenterYTextBox.Name = "CenterYTextBox";
-            this.CenterYTextBox.ReadOnly = true;
-            this.CenterYTextBox.Size = new System.Drawing.Size(120, 27);
-            this.CenterYTextBox.TabIndex = 9;
+            this.txtWigthLabel.AutoSize = true;
+            this.txtWigthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtWigthLabel.Location = new System.Drawing.Point(30, 483);
+            this.txtWigthLabel.Name = "txtWigthLabel";
+            this.txtWigthLabel.Size = new System.Drawing.Size(50, 18);
+            this.txtWigthLabel.TabIndex = 13;
+            this.txtWigthLabel.Text = "Wigth:";
             // 
-            // CenterXLabel
+            // txtLengthLabel
             // 
-            this.CenterXLabel.AutoSize = true;
-            this.CenterXLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CenterXLabel.Location = new System.Drawing.Point(367, 22);
-            this.CenterXLabel.Name = "CenterXLabel";
-            this.CenterXLabel.Size = new System.Drawing.Size(70, 18);
-            this.CenterXLabel.TabIndex = 10;
-            this.CenterXLabel.Text = "Center X:";
+            this.txtLengthLabel.AutoSize = true;
+            this.txtLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtLengthLabel.Location = new System.Drawing.Point(24, 441);
+            this.txtLengthLabel.Name = "txtLengthLabel";
+            this.txtLengthLabel.Size = new System.Drawing.Size(56, 18);
+            this.txtLengthLabel.TabIndex = 12;
+            this.txtLengthLabel.Text = "Length:";
             // 
-            // CenterYLabel
+            // txtYLabel
             // 
-            this.CenterYLabel.AutoSize = true;
-            this.CenterYLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CenterYLabel.Location = new System.Drawing.Point(367, 85);
-            this.CenterYLabel.Name = "CenterYLabel";
-            this.CenterYLabel.Size = new System.Drawing.Size(69, 18);
-            this.CenterYLabel.TabIndex = 11;
-            this.CenterYLabel.Text = "Center Y:";
+            this.txtYLabel.AutoSize = true;
+            this.txtYLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtYLabel.Location = new System.Drawing.Point(56, 400);
+            this.txtYLabel.Name = "txtYLabel";
+            this.txtYLabel.Size = new System.Drawing.Size(24, 20);
+            this.txtYLabel.TabIndex = 11;
+            this.txtYLabel.Text = "Y:";
             // 
-            // RectangleIdTextBox
+            // txtXLabel
             // 
-            this.RectangleIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RectangleIdTextBox.Location = new System.Drawing.Point(370, 164);
-            this.RectangleIdTextBox.Name = "RectangleIdTextBox";
-            this.RectangleIdTextBox.ReadOnly = true;
-            this.RectangleIdTextBox.Size = new System.Drawing.Size(120, 27);
-            this.RectangleIdTextBox.TabIndex = 12;
+            this.txtXLabel.AutoSize = true;
+            this.txtXLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtXLabel.Location = new System.Drawing.Point(56, 358);
+            this.txtXLabel.Name = "txtXLabel";
+            this.txtXLabel.Size = new System.Drawing.Size(25, 20);
+            this.txtXLabel.TabIndex = 10;
+            this.txtXLabel.Text = "X:";
             // 
-            // RectangleIdLabel
+            // txtIdLabel
             // 
-            this.RectangleIdLabel.AutoSize = true;
-            this.RectangleIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RectangleIdLabel.Location = new System.Drawing.Point(367, 143);
-            this.RectangleIdLabel.Name = "RectangleIdLabel";
-            this.RectangleIdLabel.Size = new System.Drawing.Size(23, 18);
-            this.RectangleIdLabel.TabIndex = 13;
-            this.RectangleIdLabel.Text = "Id:";
+            this.txtIdLabel.AutoSize = true;
+            this.txtIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtIdLabel.Location = new System.Drawing.Point(56, 318);
+            this.txtIdLabel.Name = "txtIdLabel";
+            this.txtIdLabel.Size = new System.Drawing.Size(27, 20);
+            this.txtIdLabel.TabIndex = 9;
+            this.txtIdLabel.Text = "Id:";
+            // 
+            // txtWidth
+            // 
+            this.txtWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtWidth.Location = new System.Drawing.Point(86, 480);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(140, 24);
+            this.txtWidth.TabIndex = 8;
+            // 
+            // txtLenght
+            // 
+            this.txtLenght.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtLenght.Location = new System.Drawing.Point(86, 438);
+            this.txtLenght.Name = "txtLenght";
+            this.txtLenght.Size = new System.Drawing.Size(140, 24);
+            this.txtLenght.TabIndex = 7;
+            // 
+            // txtY
+            // 
+            this.txtY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtY.Location = new System.Drawing.Point(86, 398);
+            this.txtY.Name = "txtY";
+            this.txtY.Size = new System.Drawing.Size(140, 24);
+            this.txtY.TabIndex = 6;
+            // 
+            // txtX
+            // 
+            this.txtX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtX.Location = new System.Drawing.Point(86, 356);
+            this.txtX.Name = "txtX";
+            this.txtX.Size = new System.Drawing.Size(140, 24);
+            this.txtX.TabIndex = 5;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtId.Location = new System.Drawing.Point(86, 316);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(140, 24);
+            this.txtId.TabIndex = 4;
+            // 
+            // RemoveButton
+            // 
+            this.RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveButton.Location = new System.Drawing.Point(229, 204);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(102, 26);
+            this.RemoveButton.TabIndex = 3;
+            this.RemoveButton.Text = "-";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Location = new System.Drawing.Point(60, 204);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(102, 26);
+            this.AddButton.TabIndex = 2;
+            this.AddButton.Text = "+";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // listBoxRectangles
+            // 
+            this.listBoxRectangles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBoxRectangles.FormattingEnabled = true;
+            this.listBoxRectangles.ItemHeight = 18;
+            this.listBoxRectangles.Location = new System.Drawing.Point(21, 17);
+            this.listBoxRectangles.Name = "listBoxRectangles";
+            this.listBoxRectangles.Size = new System.Drawing.Size(359, 166);
+            this.listBoxRectangles.TabIndex = 1;
+            this.listBoxRectangles.SelectedIndexChanged += new System.EventHandler(this.listBoxRectangles_SelectedIndexChanged);
+            // 
+            // CanvasPanel
+            // 
+            this.CanvasPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CanvasPanel.Location = new System.Drawing.Point(449, 6);
+            this.CanvasPanel.Name = "CanvasPanel";
+            this.CanvasPanel.Size = new System.Drawing.Size(717, 580);
+            this.CanvasPanel.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -612,6 +784,8 @@
             this.FilmsGroupBox.PerformLayout();
             this.RectGroupBox.ResumeLayout(false);
             this.RectGroupBox.PerformLayout();
+            this.tabPageRectangles.ResumeLayout(false);
+            this.tabPageRectangles.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -664,6 +838,21 @@
         private System.Windows.Forms.TextBox CenterXTextBox;
         private System.Windows.Forms.Label RectangleIdLabel;
         private System.Windows.Forms.TextBox RectangleIdTextBox;
+        private System.Windows.Forms.TabPage tabPageRectangles;
+        private System.Windows.Forms.Panel CanvasPanel;
+        private System.Windows.Forms.ListBox listBoxRectangles;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Label txtXLabel;
+        private System.Windows.Forms.Label txtIdLabel;
+        private System.Windows.Forms.TextBox txtWidth;
+        private System.Windows.Forms.TextBox txtLenght;
+        private System.Windows.Forms.TextBox txtY;
+        private System.Windows.Forms.TextBox txtX;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label txtYLabel;
+        private System.Windows.Forms.Label txtWigthLabel;
+        private System.Windows.Forms.Label txtLengthLabel;
     }
 }
 

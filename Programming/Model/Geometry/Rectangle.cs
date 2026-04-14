@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Programming.Model.Classes
+namespace Programming.Model.Geometry
 {
     public class Rectangle
     {
@@ -35,6 +35,10 @@ namespace Programming.Model.Classes
             }
         }
         public Point2D Center => _center;
+        public void SetCenter(double x, double y)
+        {
+            _center = new Point2D(x, y);
+        }
         public string Color{ get; set; }
         public Rectangle() { }
         public Rectangle(double length, double width, string color, double centerX, double centerY)
