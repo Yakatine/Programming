@@ -41,6 +41,7 @@ namespace Programming.Model.Geometry
         }
         public string Color{ get; set; }
         public Rectangle() { }
+        public RectanglesCollisionControl
         public Rectangle(double length, double width, string color, double centerX, double centerY)
         {
             Length = length;

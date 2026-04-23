@@ -64,6 +64,24 @@
     <Compile Include="Model\Geometry\Ring.cs" />
     <Compile Include="Model\Validator.cs" />
     <Compile Include="Model\Enums\Weekday.cs" />
+    <Compile Include="View\EnumerationsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\EnumerationsControl.Designer.cs">
+      <DependentUpon>EnumerationsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MoviesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MoviesControl.Designer.cs">
+      <DependentUpon>MoviesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RectanglesCollisionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RectanglesCollisionControl.Designer.cs">
+      <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\RectanglesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RectanglesControl.Designer.cs">
+      <DependentUpon>RectanglesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SeasonsHandleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SeasonsHandleControl.Designer.cs">
+      <DependentUpon>SeasonsHandleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WeekdayParsingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\WeekdayParsingControl.Designer.cs">
+      <DependentUpon>WeekdayParsingControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,8 +117,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\EnumerationsControl.resx">
+      <DependentUpon>EnumerationsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MoviesControl.resx">
+      <DependentUpon>MoviesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RectanglesCollisionControl.resx">
+      <DependentUpon>RectanglesCollisionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RectanglesControl.resx">
+      <DependentUpon>RectanglesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SeasonsHandleControl.resx">
+      <DependentUpon>SeasonsHandleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WeekdayParsingControl.resx">
+      <DependentUpon>WeekdayParsingControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
